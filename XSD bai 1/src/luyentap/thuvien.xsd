@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <xs:complexType name="sachType">
+        <xs:sequence>
+            <xs:element name="tensach" type="xs:string"/>
+            <xs:element name="theloai" type="xs:string"/>
+            <xs:element name="sotrang">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="50"/>
+                        <xs:maxInclusive value="400"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="masach" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="6"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="nhaxbType">
+        <xs:sequence>
+            <xs:element name="sach" type="sachType" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="tennxb">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="Giáo d?c"/>
+                    <xs:enumeration value="Tu?i tr?"/>
+                    <xs:enumeration value="Khoa h?c k? thu?t"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="thuvienType">
+        <xs:sequence>
+            <xs:element name="nhaxb" type="nhaxbType" maxOccurs="10"/>
+        </xs:sequence>
+        <xs:attribute name="tentv" type="xs:string"></xs:attribute>
+    </xs:complexType>
+    <xs:element name="thuvien" type="thuvienType"></xs:element>
+</xs:schema>

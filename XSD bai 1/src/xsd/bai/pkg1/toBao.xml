@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<toBao
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='toBao.xsd'>
+    <baiBao maBaiBao="01">
+        <tieuDe>Bai bao dau tien</tieuDe>
+        <noiDung>Noi dung khong lien quan</noiDung>
+        <tacGia>
+            <maTG>TG561</maTG>
+            <hoTen>B?ng</hoTen>
+            <tuoi>22</tuoi>
+            <email>buibang147@gmail.com</email>
+            <dienThoai>089-678-6785</dienThoai>
+            <diaChi>
+                <xa>quang trung</xa>
+                <huyen>ha dong</huyen>
+                <tinh>Hà N?i</tinh>
+            </diaChi>
+        </tacGia>
+        <ngayThang>2019-06-12</ngayThang>
+    </baiBao>
+    <baiBao maBaiBao="01">
+        <tieuDe>Bai bao dau tien</tieuDe>
+        <noiDung>Noi dung khong lien quan</noiDung>
+        <tacGia>
+            <maTG>TG001</maTG>
+            <hoTen>B?ng</hoTen>
+            <tuoi>22</tuoi>
+            <email>buibang147@gmail.com</email>
+            <dienThoai>089-678-6785</dienThoai>
+            <diaChi>
+                <xa>quang trung</xa>
+                <huyen>ha dong</huyen>
+                <tinh>Hà N?i</tinh>
+            </diaChi>
+        </tacGia>
+        <ngayThang>2019-06-12</ngayThang>
+    </baiBao>
+    <baiBao maBaiBao="01">
+        <tieuDe>Bai bao dau tien</tieuDe>
+        <noiDung>Noi dung khong lien quan</noiDung>
+        <tacGia>
+            <maTG>TG001</maTG>
+            <hoTen>B?ng</hoTen>
+            <tuoi>22</tuoi>
+            <email>buibang147@gmail.com</email>
+            <dienThoai>089-678-6785</dienThoai>
+            <diaChi>
+                <xa>quang trung</xa>
+                <huyen>ha dong</huyen>
+                <tinh>Hà N?i</tinh>
+            </diaChi>
+        </tacGia>
+        <ngayThang>2019-06-12</ngayThang>
+    </baiBao>
+</toBao>
+

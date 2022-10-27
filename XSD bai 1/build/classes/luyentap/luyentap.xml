@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="thuvien.xsl" ?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<thuvien
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='thuvien.xsd' tentv="Khu A Dai Hoc Cong Nghiep">
+    <nhaxb tennxb="Giáo d?c">
+        <sach masach="S001">
+            <tensach>Tin van phong</tensach>
+            <theloai>Tin hoc</theloai>
+            <sotrang>50</sotrang>
+        </sach>
+        <sach masach="S002">
+            <tensach>Ke toan doanh nghiep</tensach>
+            <theloai>Kinh te</theloai>
+            <sotrang>180</sotrang>
+        </sach>
+        <sach masach="S003">
+            <tensach>Tai chinh kinh doanh</tensach>
+            <theloai>Kinh te</theloai>
+            <sotrang>220</sotrang>
+        </sach>
+    </nhaxb>
+    <nhaxb tennxb="Khoa h?c k? thu?t">
+        <sach masach="S004">
+            <tensach>Chinh kich</tensach>
+            <theloai>Van hoc</theloai>
+            <sotrang>80</sotrang>
+        </sach>
+        <sach masach="S005">
+            <tensach>Ke dao mo</tensach>
+            <theloai>Tam ly</theloai>
+            <sotrang>160</sotrang>
+        </sach>
+        <sach masach="S006">
+            <tensach>Giao nhon</tensach>
+            <theloai>Lich su</theloai>
+            <sotrang>110</sotrang>
+        </sach>
+    </nhaxb>
+</thuvien>
+

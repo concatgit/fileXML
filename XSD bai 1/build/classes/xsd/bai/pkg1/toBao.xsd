@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    
+    <xs:simpleType name="tieuDeType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="10"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="noiDungType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="20"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="tacGiaType">
+        <xs:sequence>
+            <xs:element name="maTG">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="TG\d{3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="hoTen">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="tuoi" type="xs:integer"/>
+            <xs:element name="email">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9a-z]+@[a-z]+.[a-z]{2,3}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="dienThoai">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="diaChi">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="xa">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\D+"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="huyen">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="\D+"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                        <xs:element name="tinh">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="Hà N?i"/>
+                                    <xs:enumeration value="H?i Phòng"/>
+                                    <xs:enumeration value="Qu?ng Ninh"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="baiBaoType">
+        <xs:sequence>
+            <xs:element name="tieuDe" type="tieuDeType"/>
+            <xs:element name="noiDung" type="noiDungType"/>
+            <xs:element name="tacGia" type="tacGiaType"/>
+            <xs:element name="ngayThang" type="xs:date"/>
+        </xs:sequence>
+        <xs:attribute name="maBaiBao" use="required" type="xs:integer"/>
+    </xs:complexType>
+    <xs:complexType name="toBaoType">
+        <xs:sequence>
+            <xs:element name="baiBao" type="baiBaoType" minOccurs="3" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="toBao" type="toBaoType"/>
+</xs:schema>
